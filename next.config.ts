@@ -1,7 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'storagemedia.corporategear.com',
+        pathname: '/storagemedia/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'another-domain.com',
+        pathname: '/images/**',
+      },
+    ]
+  },
 };
 
 export default nextConfig;
